@@ -1,0 +1,31 @@
+subcategory_id,control_owner,implementation_status,maturity_level,criticality,last_assessed
+GV.OC-01,CISO Office,Implemented,4,High,2026-05-12
+GV.OC-02,CISO Office,Partial,2,Medium,2026-04-02
+GV.RM-01,Risk Management,Implemented,4,High,2026-05-20
+GV.RM-03,Risk Management,Partial,3,High,2026-03-15
+GV.RR-02,HR / Security,Implemented,3,Medium,2026-02-10
+GV.PO-01,CISO Office,Implemented,4,High,2026-05-01
+GV.OV-01,Executive Leadership,Not Implemented,1,Medium,2026-01-08
+GV.SC-04,Procurement,Partial,2,High,2026-04-18
+ID.AM-01,IT Operations,Implemented,4,Medium,2026-05-22
+ID.AM-02,IT Operations,Partial,3,High,2026-05-22
+ID.RA-01,Vulnerability Mgmt,Implemented,4,High,2026-06-01
+ID.RA-05,Risk Management,Partial,3,High,2026-05-28
+ID.IM-01,Risk Management,Not Implemented,1,Low,2025-11-20
+PR.AA-01,IAM Team,Implemented,4,High,2026-06-05
+PR.AA-05,IAM Team,Partial,3,High,2026-06-05
+PR.AT-01,HR / Security,Implemented,3,Medium,2026-01-15
+PR.DS-01,Infrastructure,Implemented,4,High,2026-04-30
+PR.DS-02,Infrastructure,Implemented,4,High,2026-04-30
+PR.PS-01,Platform Engineering,Partial,2,Medium,2026-03-11
+PR.PS-04,Platform Engineering,Implemented,3,Medium,2026-03-11
+PR.IR-01,Network Security,Partial,3,High,2026-05-09
+DE.CM-01,SOC,Implemented,4,High,2026-06-10
+DE.CM-03,SOC,Partial,2,Medium,2026-06-10
+DE.AE-02,SOC,Not Implemented,1,High,2025-12-01
+RS.MA-01,Incident Response,Implemented,3,High,2026-02-20
+RS.AN-03,Incident Response,Partial,2,High,2026-02-20
+RS.CO-02,Incident Response,Not Implemented,1,Medium,2025-10-14
+RS.MI-01,Incident Response,Implemented,3,High,2026-02-20
+RC.RP-01,Disaster Recovery,Partial,2,High,2026-01-30
+RC.CO-03,Disaster Recovery,Not Implemented,1,Low,2025-09-05

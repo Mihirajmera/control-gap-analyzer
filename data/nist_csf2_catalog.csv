@@ -1,0 +1,31 @@
+function,category_id,category_name,subcategory_id,subcategory_description
+GOVERN,GV.OC,Organizational Context,GV.OC-01,The organizational mission is understood and informs cybersecurity risk management
+GOVERN,GV.OC,Organizational Context,GV.OC-02,Internal and external stakeholders are understood and their needs regarding cybersecurity risk management are determined
+GOVERN,GV.RM,Risk Management Strategy,GV.RM-01,Risk management objectives are established and agreed to by organizational stakeholders
+GOVERN,GV.RM,Risk Management Strategy,GV.RM-03,Cybersecurity risk management activities and outcomes are included in enterprise risk management processes
+GOVERN,GV.RR,"Roles, Responsibilities, and Authorities",GV.RR-02,Roles and responsibilities for cybersecurity are established and communicated
+GOVERN,GV.PO,Policy,GV.PO-01,Policy for managing cybersecurity risks is established based on organizational context
+GOVERN,GV.OV,Oversight,GV.OV-01,Cybersecurity risk management strategy outcomes are reviewed to inform and adjust strategy
+GOVERN,GV.SC,Cybersecurity Supply Chain Risk Management,GV.SC-04,Suppliers are known and prioritized by criticality
+IDENTIFY,ID.AM,Asset Management,ID.AM-01,Inventories of hardware managed by the organization are maintained
+IDENTIFY,ID.AM,Asset Management,ID.AM-02,"Inventories of software, services, and systems managed by the organization are maintained"
+IDENTIFY,ID.RA,Risk Assessment,ID.RA-01,"Vulnerabilities in assets are identified, validated, and recorded"
+IDENTIFY,ID.RA,Risk Assessment,ID.RA-05,"Threats, vulnerabilities, likelihoods, and impacts are used to determine risk"
+IDENTIFY,ID.IM,Improvement,ID.IM-01,Improvements are identified from evaluations
+PROTECT,PR.AA,"Identity Management, Authentication, and Access Control",PR.AA-01,"Identities and credentials for authorized users, services, and hardware are managed"
+PROTECT,PR.AA,"Identity Management, Authentication, and Access Control",PR.AA-05,Access permissions are defined based on the principle of least privilege
+PROTECT,PR.AT,Awareness and Training,PR.AT-01,Personnel are provided with cybersecurity awareness and training
+PROTECT,PR.DS,Data Security,PR.DS-01,The confidentiality, integrity, and availability of data-at-rest are protected
+PROTECT,PR.DS,Data Security,PR.DS-02,The confidentiality, integrity, and availability of data-in-transit are protected
+PROTECT,PR.PS,Platform Security,PR.PS-01,Configuration management practices are established and applied
+PROTECT,PR.PS,Platform Security,PR.PS-04,Log records are generated and made available for continuous monitoring
+PROTECT,PR.IR,Technology Infrastructure Resilience,PR.IR-01,Networks and environments are protected from unauthorized logical access and usage
+DETECT,DE.CM,Continuous Monitoring,DE.CM-01,Networks and network services are monitored to find potentially adverse events
+DETECT,DE.CM,Continuous Monitoring,DE.CM-03,Personnel activity and technology usage are monitored to find potentially adverse events
+DETECT,DE.AE,Adverse Event Analysis,DE.AE-02,Potentially adverse events are analyzed to better understand associated activities
+RESPOND,RS.MA,Incident Management,RS.MA-01,The incident response plan is executed once an incident is declared
+RESPOND,RS.AN,Incident Analysis,RS.AN-03,Analysis is performed to establish what has taken place during an incident
+RESPOND,RS.CO,Incident Response Reporting and Communication,RS.CO-02,Internal and external stakeholders are notified of incidents
+RESPOND,RS.MI,Incident Mitigation,RS.MI-01,Incidents are contained
+RECOVER,RC.RP,Incident Recovery Plan Execution,RC.RP-01,The recovery portion of the incident response plan is executed once initiated
+RECOVER,RC.CO,Incident Recovery Communication,RC.CO-03,Recovery activities and progress are communicated to designated stakeholders
