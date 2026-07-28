@@ -1,0 +1,31 @@
+function,category_id,subcategory_id,description,owner,status,maturity,criticality,risk_score,priority
+DETECT,DE.AE,DE.AE-02,Potentially adverse events are analyzed to better understand associated activities,SOC,Not Implemented,1,High,16.2,Critical
+GOVERN,GV.OV,GV.OV-01,Cybersecurity risk management strategy outcomes are reviewed to inform and adjust strategy,Executive Leadership,Not Implemented,1,Medium,10.8,High
+RESPOND,RS.CO,RS.CO-02,Internal and external stakeholders are notified of incidents,Incident Response,Not Implemented,1,Medium,10.8,High
+GOVERN,GV.SC,GV.SC-04,Suppliers are known and prioritized by criticality,Procurement,Partial,2,High,9.6,High
+RESPOND,RS.AN,RS.AN-03,Analysis is performed to establish what has taken place during an incident,Incident Response,Partial,2,High,9.6,High
+RECOVER,RC.RP,RC.RP-01,The recovery portion of the incident response plan is executed once initiated,Disaster Recovery,Partial,2,High,9.6,High
+GOVERN,GV.RM,GV.RM-03,Cybersecurity risk management activities and outcomes are included in enterprise risk management processes,Risk Management,Partial,3,High,8.4,High
+IDENTIFY,ID.AM,ID.AM-02,"Inventories of software, services, and systems managed by the organization are maintained",IT Operations,Partial,3,High,8.4,High
+IDENTIFY,ID.RA,ID.RA-05,"Threats, vulnerabilities, likelihoods, and impacts are used to determine risk",Risk Management,Partial,3,High,8.4,High
+PROTECT,PR.AA,PR.AA-05,Access permissions are defined based on the principle of least privilege,IAM Team,Partial,3,High,8.4,High
+PROTECT,PR.IR,PR.IR-01,Networks and environments are protected from unauthorized logical access and usage,Network Security,Partial,3,High,8.4,High
+GOVERN,GV.OC,GV.OC-02,Internal and external stakeholders are understood and their needs regarding cybersecurity risk management are determined,CISO Office,Partial,2,Medium,6.4,Medium
+PROTECT,PR.PS,PR.PS-01,Configuration management practices are established and applied,Platform Engineering,Partial,2,Medium,6.4,Medium
+DETECT,DE.CM,DE.CM-03,Personnel activity and technology usage are monitored to find potentially adverse events,SOC,Partial,2,Medium,6.4,Medium
+IDENTIFY,ID.IM,ID.IM-01,Improvements are identified from evaluations,Risk Management,Not Implemented,1,Low,5.4,Medium
+RECOVER,RC.CO,RC.CO-03,Recovery activities and progress are communicated to designated stakeholders,Disaster Recovery,Not Implemented,1,Low,5.4,Medium
+GOVERN,GV.OC,GV.OC-01,The organizational mission is understood and informs cybersecurity risk management,CISO Office,Implemented,4,High,0.0,None
+GOVERN,GV.RM,GV.RM-01,Risk management objectives are established and agreed to by organizational stakeholders,Risk Management,Implemented,4,High,0.0,None
+GOVERN,GV.RR,GV.RR-02,Roles and responsibilities for cybersecurity are established and communicated,HR / Security,Implemented,3,Medium,0.0,None
+GOVERN,GV.PO,GV.PO-01,Policy for managing cybersecurity risks is established based on organizational context,CISO Office,Implemented,4,High,0.0,None
+IDENTIFY,ID.AM,ID.AM-01,Inventories of hardware managed by the organization are maintained,IT Operations,Implemented,4,Medium,0.0,None
+IDENTIFY,ID.RA,ID.RA-01,"Vulnerabilities in assets are identified, validated, and recorded",Vulnerability Mgmt,Implemented,4,High,0.0,None
+PROTECT,PR.AA,PR.AA-01,"Identities and credentials for authorized users, services, and hardware are managed",IAM Team,Implemented,4,High,0.0,None
+PROTECT,PR.AT,PR.AT-01,Personnel are provided with cybersecurity awareness and training,HR / Security,Implemented,3,Medium,0.0,None
+PROTECT,PR.DS,PR.DS-01,The confidentiality,Infrastructure,Implemented,4,High,0.0,None
+PROTECT,PR.DS,PR.DS-02,The confidentiality,Infrastructure,Implemented,4,High,0.0,None
+PROTECT,PR.PS,PR.PS-04,Log records are generated and made available for continuous monitoring,Platform Engineering,Implemented,3,Medium,0.0,None
+DETECT,DE.CM,DE.CM-01,Networks and network services are monitored to find potentially adverse events,SOC,Implemented,4,High,0.0,None
+RESPOND,RS.MA,RS.MA-01,The incident response plan is executed once an incident is declared,Incident Response,Implemented,3,High,0.0,None
+RESPOND,RS.MI,RS.MI-01,Incidents are contained,Incident Response,Implemented,3,High,0.0,None
