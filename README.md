@@ -51,11 +51,19 @@ Transparent by design — no black box:
 Scores ≥12 are **Critical**, ≥7 **High**, ≥3 **Medium**, >0 **Low**. Adjust the weights in
 `gap_analyzer/scorer.py` to match your organization's risk appetite.
 
-## Quick start
+## Installation & Quick Start
+
+You can install the tool locally as a package:
 
 ```bash
-pip install -r requirements.txt
-python cli.py
+pip install -e .
+```
+
+Once installed, run it using the `control-gap-analyzer` CLI command:
+
+```bash
+# Run with default synthetic sample data
+control-gap-analyzer
 ```
 
 This runs against the included synthetic sample data (`data/nist_csf2_catalog.csv` +
@@ -101,11 +109,16 @@ control-gap-analyzer/
     └── test_scorer.py
 ```
 
-## Tests
+## 🤖 CI/CD & Testing
+
+This project uses `pytest` for testing, and is configured with automated CI/CD checks:
+- **CI/CD Pipeline**: A GitHub Actions workflow (`.github/workflows/python-ci.yml`) runs automatically on push/pull requests to check code style (`flake8`), run security scans (`bandit`), and execute tests (`pytest`).
+
+To install development dependencies and run tests locally:
 
 ```bash
-pip install pytest
-python -m pytest tests/ -v
+pip install -e .[dev]
+pytest
 ```
 
 ## Roadmap

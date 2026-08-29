@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "control-gap-analyzer"
+version = "0.1.0"
+description = "Risk-prioritized control gap analysis for NIST cyber frameworks"
+readme = "README.md"
+requires-python = ">=3.8"
+authors = [
+    { name = "Mihir Ajmera", email = "ajmera.mihir.79@gmail.com" }
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Security",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "flake8>=6.0",
+    "bandit>=1.7",
+    "black>=23.0",
+]
+
+[project.scripts]
+control-gap-analyzer = "cli:main"
+
+[tool.setuptools]
+packages = ["gap_analyzer"]
+py-modules = ["cli"]
