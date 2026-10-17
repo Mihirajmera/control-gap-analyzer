@@ -6,3 +6,6 @@ dist/
 build/
 venv/
 test_env/
+
+# local virtual environments
+.venv*/

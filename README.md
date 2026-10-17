@@ -1,7 +1,10 @@
 # 🧭 NIST CSF 2.0 Control Gap Analyzer
 
+[![CI](https://github.com/Mihirajmera/control-gap-analyzer/actions/workflows/python-ci.yml/badge.svg)](https://github.com/Mihirajmera/control-gap-analyzer/actions/workflows/python-ci.yml)
+[![CodeQL](https://github.com/Mihirajmera/control-gap-analyzer/actions/workflows/codeql.yml/badge.svg)](https://github.com/Mihirajmera/control-gap-analyzer/actions/workflows/codeql.yml)
+[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/Mihirajmera/control-gap-analyzer/badge)](https://scorecard.dev/viewer/?uri=github.com/Mihirajmera/control-gap-analyzer)
+[![Release](https://img.shields.io/github/v/release/Mihirajmera/control-gap-analyzer?color=0891b2)](https://github.com/Mihirajmera/control-gap-analyzer/releases)
 [![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
-[![Tests](https://img.shields.io/badge/tests-passing-brightgreen?style=for-the-badge&logo=pytest&logoColor=white)](tests/)
 [![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](LICENSE)
 
 A Python tool that joins an organization's control implementation status against the
