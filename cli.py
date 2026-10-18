@@ -10,6 +10,7 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import csv
 from pathlib import Path
 
 from gap_analyzer.catalog import join
@@ -28,7 +29,10 @@ def main() -> None:
 
     Path(args.out_md).parent.mkdir(parents=True, exist_ok=True)
 
-    records = join(args.catalog, args.implementation)
+    try:
+        records = join(args.catalog, args.implementation)
+    except (ValueError, KeyError, csv.Error) as e:
+        raise SystemExit(f"error: {e}")
     scored = score_all(records)
 
     write_markdown_report(scored, args.out_md, framework=args.framework)
