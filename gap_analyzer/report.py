@@ -17,6 +17,19 @@ PRIORITY_EMOJI = {
 }
 
 
+def _md(value) -> str:
+    """Escape text for a Markdown table cell so a '|' can't break the row."""
+    return str(value).replace("|", "\\|").replace("\n", " ")
+
+
+def _csv_safe(value):
+    """Neutralize spreadsheet formulas (CSV injection): a cell that starts with = + - @ or a
+    control character is prefixed with ' so Excel and Sheets treat it as text."""
+    if isinstance(value, str) and value[:1] in ("=", "+", "-", "@", "\t", "\r"):
+        return "'" + value
+    return value
+
+
 def summarize_by_function(scored: list[ScoredControl]) -> dict[str, dict[str, int]]:
     summary: dict[str, dict[str, int]] = defaultdict(lambda: defaultdict(int))
     for s in scored:
@@ -63,8 +76,8 @@ def write_markdown_report(scored: list[ScoredControl], out_path: str | Path, fra
         r = s.record
         emoji = PRIORITY_EMOJI.get(s.priority, "")
         lines.append(
-            f"| {emoji} {s.priority} | `{r.subcategory_id}` | {r.subcategory_description} | "
-            f"{r.control_owner} | {r.implementation_status} | {r.maturity_level}/5 | {s.risk_score} |"
+            f"| {emoji} {s.priority} | `{_md(r.subcategory_id)}` | {_md(r.subcategory_description)} | "
+            f"{_md(r.control_owner)} | {_md(r.implementation_status)} | {r.maturity_level}/5 | {s.risk_score} |"
         )
     lines.append("")
 
@@ -80,8 +93,7 @@ def write_csv_export(scored: list[ScoredControl], out_path: str | Path) -> None:
         )
         for s in scored:
             r = s.record
-            writer.writerow(
-                [r.function, r.category_id, r.subcategory_id, r.subcategory_description,
-                 r.control_owner, r.implementation_status, r.maturity_level, r.criticality,
-                 s.risk_score, s.priority]
-            )
+            writer.writerow([_csv_safe(v) for v in (
+                r.function, r.category_id, r.subcategory_id, r.subcategory_description,
+                r.control_owner, r.implementation_status, r.maturity_level, r.criticality,
+                s.risk_score, s.priority)])

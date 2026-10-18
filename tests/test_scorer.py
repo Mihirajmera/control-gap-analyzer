@@ -37,3 +37,39 @@ def test_partial_scores_between_implemented_and_not_implemented():
     partial = score_control(make_record(implementation_status="Partial", maturity_level=4))
     not_impl = score_control(make_record(implementation_status="Not Implemented", maturity_level=4))
     assert implemented.risk_score < partial.risk_score < not_impl.risk_score
+
+
+def _impl(tmp_path, body):
+    p = tmp_path / "impl.csv"
+    p.write_text(body, encoding="utf-8")
+    return p
+
+
+def test_maturity_out_of_range_is_rejected(tmp_path):
+    # maturity 10 used to drive the risk score to 0 and hide a Not Implemented, High control
+    import pytest
+    from gap_analyzer.catalog import ImplementationFileError, load_implementation
+    p = _impl(tmp_path, "subcategory_id,implementation_status,maturity_level,criticality\n"
+                        "PR.AA-01,Not Implemented,10,High\n")
+    with pytest.raises(ImplementationFileError, match="line 2: maturity_level must be 0-5"):
+        load_implementation(p)
+
+
+def test_bad_maturity_and_missing_column_are_clear_errors(tmp_path):
+    import pytest
+    from gap_analyzer.catalog import ImplementationFileError, load_implementation
+    with pytest.raises(ImplementationFileError, match="whole number"):
+        load_implementation(_impl(tmp_path, "subcategory_id,maturity_level\nPR.AA-01,high\n"))
+    with pytest.raises(ImplementationFileError, match="subcategory_id"):
+        load_implementation(_impl(tmp_path, "id,maturity_level\nPR.AA-01,2\n"))
+
+
+def test_csv_export_neutralizes_formulas(tmp_path):
+    import csv
+    from gap_analyzer.report import write_csv_export
+    from gap_analyzer.scorer import score_all
+    rec = make_record(control_owner='=HYPERLINK("http://evil.example","x")')
+    out = tmp_path / "out.csv"
+    write_csv_export(score_all([rec]), out)
+    row = list(csv.DictReader(out.open(encoding="utf-8")))[0]
+    assert row["owner"].startswith("'=")
