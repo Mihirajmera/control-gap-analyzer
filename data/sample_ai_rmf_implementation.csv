@@ -1,0 +1,69 @@
+subcategory_id,control_owner,implementation_status,maturity_level,criticality,last_assessed
+GOVERN 1.1,AI Governance Lead,Partial,3,High,2026-04-05
+GOVERN 1.2,AI Governance Lead,Partial,3,High,2026-03-24
+GOVERN 1.3,AI Governance Lead,Implemented,3,Medium,2026-08-27
+GOVERN 1.4,AI Governance Lead,Partial,2,High,2026-03-02
+GOVERN 1.5,AI Governance Lead,Partial,3,High,2026-04-09
+GOVERN 1.6,AI Governance Lead,Implemented,4,High,2026-05-31
+GOVERN 1.7,AI Governance Lead,Not Implemented,2,Medium,2026-04-01
+GOVERN 2.1,AI Governance Lead,Not Implemented,2,High,2026-08-08
+GOVERN 2.2,AI Governance Lead,Partial,3,Medium,2026-03-12
+GOVERN 2.3,AI Governance Lead,Partial,2,Low,2026-06-06
+GOVERN 3.1,AI Governance Lead,Implemented,4,High,2026-08-19
+GOVERN 3.2,AI Governance Lead,Implemented,3,High,2026-09-03
+GOVERN 4.1,AI Governance Lead,Implemented,5,Low,2026-08-11
+GOVERN 4.2,AI Governance Lead,Partial,3,Medium,2026-09-15
+GOVERN 5.1,AI Governance Lead,Not Implemented,1,High,2026-07-24
+GOVERN 5.2,AI Governance Lead,Not Implemented,2,Medium,2026-08-12
+GOVERN 6.1,AI Governance Lead,Partial,2,Medium,2026-07-16
+GOVERN 6.2,AI Governance Lead,Implemented,5,High,2026-04-05
+MAP 1.1,Product & ML Lead,Partial,2,High,2026-04-10
+MAP 1.2,Product & ML Lead,Not Implemented,1,High,2026-07-31
+MAP 1.3,Product & ML Lead,Not Implemented,1,Medium,2026-03-30
+MAP 1.4,Product & ML Lead,Partial,3,High,2026-06-20
+MAP 1.5,Product & ML Lead,Implemented,3,High,2026-07-07
+MAP 1.6,Product & ML Lead,Not Implemented,1,Medium,2026-07-08
+MAP 2.1,Product & ML Lead,Partial,2,Medium,2026-09-16
+MAP 2.2,Product & ML Lead,Not Implemented,1,Medium,2026-03-29
+MAP 2.3,Product & ML Lead,Not Implemented,1,High,2026-07-24
+MAP 3.1,Product & ML Lead,Not Implemented,1,Medium,2026-09-11
+MAP 3.2,Product & ML Lead,Partial,2,Medium,2026-07-19
+MAP 3.3,Product & ML Lead,Implemented,5,Medium,2026-08-24
+MAP 3.4,Product & ML Lead,Implemented,4,Medium,2026-06-21
+MAP 3.5,Product & ML Lead,Not Implemented,1,High,2026-05-26
+MAP 4.2,Product & ML Lead,Partial,2,Medium,2026-03-16
+MAP 5.1,Product & ML Lead,Implemented,3,Medium,2026-05-11
+MAP 5.2,Product & ML Lead,Partial,3,Medium,2026-07-25
+MEASURE 1.1,ML Evaluation,Not Implemented,1,High,2026-03-25
+MEASURE 1.2,ML Evaluation,Not Implemented,1,Medium,2026-09-03
+MEASURE 2.1,ML Evaluation,Not Implemented,1,Medium,2026-03-28
+MEASURE 2.2,ML Evaluation,Partial,3,High,2026-04-16
+MEASURE 2.3,ML Evaluation,Partial,2,Medium,2026-07-19
+MEASURE 2.4,ML Evaluation,Implemented,3,High,2026-07-03
+MEASURE 2.5,ML Evaluation,Partial,2,High,2026-06-08
+MEASURE 2.6,ML Evaluation,Partial,2,Medium,2026-09-04
+MEASURE 2.7,ML Evaluation,Not Implemented,1,High,2026-03-15
+MEASURE 2.8,ML Evaluation,Not Implemented,1,High,2026-07-28
+MEASURE 2.9,ML Evaluation,Partial,2,High,2026-04-17
+MEASURE 2.10,ML Evaluation,Implemented,3,High,2026-07-24
+MEASURE 2.11,ML Evaluation,Partial,3,High,2026-07-28
+MEASURE 2.12,ML Evaluation,Not Implemented,1,Medium,2026-05-20
+MEASURE 2.13,ML Evaluation,Partial,2,Medium,2026-06-26
+MEASURE 3.1,ML Evaluation,Partial,2,Medium,2026-07-23
+MEASURE 3.2,ML Evaluation,Not Implemented,1,Medium,2026-04-03
+MEASURE 3.3,ML Evaluation,Not Implemented,1,High,2026-06-21
+MEASURE 4.1,ML Evaluation,Not Implemented,2,Medium,2026-08-18
+MEASURE 4.2,ML Evaluation,Not Implemented,1,Low,2026-04-04
+MEASURE 4.3,ML Evaluation,Partial,3,High,2026-05-12
+MANAGE 1.1,AI Risk Committee,Partial,2,Medium,2026-05-07
+MANAGE 1.2,AI Risk Committee,Partial,2,Medium,2026-05-10
+MANAGE 1.4,AI Risk Committee,Partial,3,High,2026-06-22
+MANAGE 2.1,AI Risk Committee,Partial,3,High,2026-08-24
+MANAGE 2.2,AI Risk Committee,Not Implemented,2,Medium,2026-06-19
+MANAGE 2.3,AI Risk Committee,Implemented,4,Low,2026-04-23
+MANAGE 2.4,AI Risk Committee,Not Implemented,2,Low,2026-06-13
+MANAGE 3.1,AI Risk Committee,Not Implemented,1,Low,2026-04-15
+MANAGE 3.2,AI Risk Committee,Not Implemented,2,Low,2026-09-17
+MANAGE 4.1,AI Risk Committee,Not Implemented,1,Medium,2026-03-28
+MANAGE 4.2,AI Risk Committee,Partial,2,High,2026-06-26
+MANAGE 4.3,AI Risk Committee,Partial,2,Medium,2026-06-11

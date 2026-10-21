@@ -1,0 +1,39 @@
+function,category_id,category_name,subcategory_id,subcategory_description
+A.2 Policies,A.2,Policies related to AI,A.2.2,A documented AI policy sets direction for developing and using AI systems
+A.2 Policies,A.2,Policies related to AI,A.2.3,The AI policy is aligned with other organizational policies such as security and privacy
+A.2 Policies,A.2,Policies related to AI,A.2.4,The AI policy is reviewed at planned intervals and when things change
+A.3 Internal organization,A.3,Internal organization,A.3.2,Roles and responsibilities for AI are defined and allocated
+A.3 Internal organization,A.3,Internal organization,A.3.3,People can report concerns about AI systems through a defined process
+A.4 Resources,A.4,Resources for AI systems,A.4.2,Resources needed across the AI system life cycle are identified and documented
+A.4 Resources,A.4,Resources for AI systems,A.4.3,Data resources used by AI systems are documented
+A.4 Resources,A.4,Resources for AI systems,A.4.4,Tooling resources used by AI systems are documented
+A.4 Resources,A.4,Resources for AI systems,A.4.5,System and computing resources used by AI systems are documented
+A.4 Resources,A.4,Resources for AI systems,A.4.6,Human resources and competencies for AI systems are documented
+A.5 Impact assessment,A.5,Assessing impacts of AI systems,A.5.2,A process exists to assess the potential consequences of AI systems
+A.5 Impact assessment,A.5,Assessing impacts of AI systems,A.5.3,Results of AI system impact assessments are documented and retained
+A.5 Impact assessment,A.5,Assessing impacts of AI systems,A.5.4,Impacts on individuals and groups of individuals are assessed
+A.5 Impact assessment,A.5,Assessing impacts of AI systems,A.5.5,Societal impacts of AI systems are assessed
+A.6 AI system life cycle,A.6.1,Management guidance for AI system development,A.6.1.2,Objectives for responsible development of AI systems are defined and documented
+A.6 AI system life cycle,A.6.1,Management guidance for AI system development,A.6.1.3,Processes for responsible design and development are defined and documented
+A.6 AI system life cycle,A.6.2,AI system life cycle,A.6.2.2,Requirements and specifications for new or changed AI systems are documented
+A.6 AI system life cycle,A.6.2,AI system life cycle,A.6.2.3,Design and development decisions are documented
+A.6 AI system life cycle,A.6.2,AI system life cycle,A.6.2.4,Verification and validation measures and acceptance criteria are defined and applied
+A.6 AI system life cycle,A.6.2,AI system life cycle,A.6.2.5,A deployment plan exists and requirements are met before deployment
+A.6 AI system life cycle,A.6.2,AI system life cycle,A.6.2.6,Operation and monitoring of AI systems are defined and performed
+A.6 AI system life cycle,A.6.2,AI system life cycle,A.6.2.7,Technical documentation is maintained for each relevant audience
+A.6 AI system life cycle,A.6.2,AI system life cycle,A.6.2.8,Event logs are recorded at the appropriate life cycle phases
+A.7 Data,A.7,Data for AI systems,A.7.2,Data management processes for developing and enhancing AI systems are defined
+A.7 Data,A.7,Data for AI systems,A.7.3,How data is acquired and selected for AI systems is documented
+A.7 Data,A.7,Data for AI systems,A.7.4,Data quality requirements are defined and data meets them
+A.7 Data,A.7,Data for AI systems,A.7.5,Data provenance is recorded across the data life cycle
+A.7 Data,A.7,Data for AI systems,A.7.6,Criteria for preparing data are defined and documented
+A.8 Information for interested parties,A.8,Information for interested parties,A.8.2,Users receive the information they need about the AI system
+A.8 Information for interested parties,A.8,Information for interested parties,A.8.3,Interested parties can report adverse impacts of the AI system
+A.8 Information for interested parties,A.8,Information for interested parties,A.8.4,A plan exists to communicate AI system incidents to users
+A.8 Information for interested parties,A.8,Information for interested parties,A.8.5,Obligations to report information about the AI system to interested parties are determined
+A.9 Use of AI systems,A.9,Use of AI systems,A.9.2,Processes for responsible use of AI systems are defined and documented
+A.9 Use of AI systems,A.9,Use of AI systems,A.9.3,Objectives guiding responsible use of AI systems are identified and documented
+A.9 Use of AI systems,A.9,Use of AI systems,A.9.4,AI systems are used according to their intended use and documentation
+A.10 Third parties,A.10,Third-party and customer relationships,A.10.2,Responsibilities are allocated between the organization and its partners and suppliers
+A.10 Third parties,A.10,Third-party and customer relationships,A.10.3,Suppliers' services and products align with the organization's approach to responsible AI
+A.10 Third parties,A.10,Third-party and customer relationships,A.10.4,Customer expectations and needs are considered for responsible AI

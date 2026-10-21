@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import csv
+import re
 from collections import defaultdict
 from datetime import date
 from pathlib import Path
@@ -30,6 +31,21 @@ def _csv_safe(value):
     return value
 
 
+CSF_FUNCTIONS = ["GOVERN", "IDENTIFY", "PROTECT", "DETECT", "RESPOND", "RECOVER"]
+AI_RMF_FUNCTIONS = ["GOVERN", "MAP", "MEASURE", "MANAGE"]
+
+
+def function_order(scored: list[ScoredControl]) -> list[str]:
+    """Functions to report, in the framework's own order: all six for NIST CSF, the AI RMF's
+    four, and natural order (A.2, A.3 ... A.10) for anything else, such as ISO 42001 Annex A."""
+    present = {s.record.function for s in scored}
+    if present <= set(CSF_FUNCTIONS):
+        return CSF_FUNCTIONS
+    if present <= set(AI_RMF_FUNCTIONS):
+        return AI_RMF_FUNCTIONS
+    return sorted(present, key=lambda f: [int(t) if t.isdigit() else t for t in re.split(r"(\d+)", f)])
+
+
 def summarize_by_function(scored: list[ScoredControl]) -> dict[str, dict[str, int]]:
     summary: dict[str, dict[str, int]] = defaultdict(lambda: defaultdict(int))
     for s in scored:
@@ -55,15 +71,15 @@ def write_markdown_report(scored: list[ScoredControl], out_path: str | Path, fra
     lines.append(f"- **{len(critical)}** Critical priority, **{len(high)}** High priority")
     lines.append("")
 
-    lines.append("## Gaps by NIST CSF 2.0 Function")
+    lines.append(f"## Gaps by {framework} Function")
     lines.append("")
     lines.append("| Function | Critical | High | Medium | Low | Closed |")
     lines.append("|---|---|---|---|---|---|")
     summary = summarize_by_function(scored)
-    for fn in ["GOVERN", "IDENTIFY", "PROTECT", "DETECT", "RESPOND", "RECOVER"]:
+    for fn in function_order(scored):
         row = summary.get(fn, {})
         lines.append(
-            f"| {fn} | {row.get('Critical', 0)} | {row.get('High', 0)} | "
+            f"| {_md(fn)} | {row.get('Critical', 0)} | {row.get('High', 0)} | "
             f"{row.get('Medium', 0)} | {row.get('Low', 0)} | {row.get('None', 0)} |"
         )
     lines.append("")

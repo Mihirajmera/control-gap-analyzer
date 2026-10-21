@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+- NIST AI RMF 1.0 catalog (all 72 subcategories, verbatim from NIST's Playbook JSON, rebuilt by `scripts/build_ai_rmf_catalog.py`) and ISO/IEC 42001 Annex A catalog (38 controls, paraphrased), each with a sample assessment and report.
+- Reports summarize gaps by the framework's own functions; they previously always listed the six NIST CSF functions, so other frameworks showed empty rows and missing functions.
+
 ## 1.0.1 (2026-10-18)
 
 - **Fixed:** a `maturity_level` above 5 drove the risk score to zero or below, hiding the gap. Values must be whole numbers 0-5; errors name the line.
