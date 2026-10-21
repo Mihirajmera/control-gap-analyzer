@@ -1,4 +1,4 @@
-# 🧭 NIST CSF 2.0 Control Gap Analyzer
+# 🧭 Control Gap Analyzer: NIST CSF 2.0, NIST AI RMF and ISO/IEC 42001
 
 [![CI](https://github.com/Mihirajmera/control-gap-analyzer/actions/workflows/python-ci.yml/badge.svg)](https://github.com/Mihirajmera/control-gap-analyzer/actions/workflows/python-ci.yml)
 [![CodeQL](https://github.com/Mihirajmera/control-gap-analyzer/actions/workflows/codeql.yml/badge.svg)](https://github.com/Mihirajmera/control-gap-analyzer/actions/workflows/codeql.yml)
@@ -8,7 +8,7 @@
 [![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](LICENSE)
 
 A Python tool that joins an organization's control implementation status against the
-**NIST CSF 2.0** subcategory catalog, risk-scores every gap by status × maturity ×
+**NIST CSF 2.0**, **NIST AI RMF 1.0** or **ISO/IEC 42001 Annex A** catalog, risk-scores every gap by status × maturity ×
 criticality, and produces a prioritized remediation backlog — the same exercise a GRC
 team runs manually in ServiceNow GRC / RSA Archer during a compliance gap analysis,
 automated and reproducible.
@@ -95,6 +95,21 @@ python cli.py --catalog data/nist_csf2_catalog.csv \
 
 Full report: [`reports/gap_report.md`](reports/gap_report.md)
 
+## AI governance frameworks
+
+The same scoring works for AI management systems. Two more catalogs ship with sample assessments for a fictional company running an LLM customer-support assistant:
+
+| Framework | Catalog | Sample report |
+|---|---|---|
+| **NIST AI RMF 1.0**: all 72 subcategories across Govern, Map, Measure and Manage | [`data/nist_ai_rmf_catalog.csv`](data/nist_ai_rmf_catalog.csv) | [`reports/ai_rmf_gap_report.md`](reports/ai_rmf_gap_report.md) |
+| **ISO/IEC 42001:2023 Annex A**: all 38 controls, A.2 to A.10 | [`data/iso42001_annexA_catalog.csv`](data/iso42001_annexA_catalog.csv) | [`reports/iso42001_gap_report.md`](reports/iso42001_gap_report.md) |
+
+```bash
+python cli.py --catalog data/nist_ai_rmf_catalog.csv --implementation data/sample_ai_rmf_implementation.csv   --framework "NIST AI RMF 1.0" --out-md reports/ai_rmf_gap_report.md --out-csv reports/ai_rmf_gap_report.csv
+```
+
+**Sources.** The AI RMF subcategory text is taken verbatim from NIST's official [AI RMF Playbook JSON](https://airc.nist.gov/airmf-resources/playbook) (a US government work in the public domain; SHA-256 `aecbee3d3c88…` when built) by [`scripts/build_ai_rmf_catalog.py`](scripts/build_ai_rmf_catalog.py); the category names are short labels written for this tool. ISO/IEC 42001 is copyrighted, so the Annex A catalog has the official control numbers with **short descriptions in my own words**. Use the standard for the authoritative text.
+
 ## Project structure
 
 ```
@@ -126,7 +141,9 @@ pytest
 
 ## Roadmap
 
+- [x] NIST AI RMF 1.0 and ISO/IEC 42001 Annex A catalogs
 - [ ] Add SP 800-53 Rev 5 and PCI-DSS v4.0 catalogs alongside NIST CSF 2.0
+- [ ] Crosswalk between AI RMF subcategories and ISO 42001 controls
 - [ ] ServiceNow GRC / RSA Archer CSV export format adapters
 - [ ] Trend view across multiple assessment snapshots (control maturity over time)
 - [ ] HTML report with charts (currently Markdown/CSV only)
